@@ -12,7 +12,10 @@ app.use(express.static(path.join(__dirname, '../client/build')))
 
 //db switcher
 //mongoDB
-const db = require('../db/mongoDBFunctions.js')
+const db = require('../db/mongoDBFunctions.js');
+
+//postgresQL
+// const db = require('../db/indexPostgreSQL.js');
 
 app.get('/moist-air/', db.getAllGames);
 
