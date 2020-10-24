@@ -3,7 +3,6 @@ const db = require('./psqlFunctions.js');
 
 module.exports = {
   getOneGame: (req, res) => {
-    console.time();
     var reqId = [req.query.id];
     db.getOne(reqId, (err, results) => {
       if (err) {
@@ -44,19 +43,35 @@ module.exports = {
         game.moreLikeThis = objArrayParser(game.moreLikeThis);
         game.requirements = objParser(game.requirements);
         game.attributes = objParser(game.attributes);
-        console.log(game)
         res.json(game);
         res.end(console.log('Game Recieved'))
-        console.timeEnd();
+      }
+    })
+  },
+
+
+  postGame: (req, res) => {
+    var params = [req.body.id,
+      req.body.titleCover,
+      req.body.title,
+      req.body.price,
+      req.body.aboutInfo,
+      req.body.requirements,
+      req.body.genre,
+      req.body.developer,
+      req.body.publisher,
+      req.body.releaseDate,
+      req.body.steamAcheivments,
+      req.body.languages,
+      req.body.attributes,
+      req.body.moreLikeThis];
+    db.insertOne(params, (err, results) => {
+      if (err) {
+        throw err
+      } else {
+        res.status(201).end(console.log('Game Created'))
       }
     })
   }
 }
 
-
-// const parseOBJ = (array) => {
-//   for (var i = 0; i < array.length; i++) {
-//     array[i] =
-//   }
-//   return array;
-// }

@@ -7,8 +7,6 @@ module.exports = {
   getOne: (params, callback) => {
     const queryString =
     'SELECT * FROM games WHERE id = $1';
-
-
     db.query(queryString, params, (err, results) => {
       if (err) {
         throw err;
@@ -16,15 +14,17 @@ module.exports = {
         callback(null, results);
       }
     })
+  },
+
+  insertOne: (params, callback) => {
+    const queryString = 'INSERT INTO games (id, titleCover, title, price, aboutInfo, requirements, genre, developer, publisher, releaseDate, steamAcheivments, languages, attributes, moreLikeThis) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)'
+    db.query(queryString, params, (err, results) => {
+      if (err) {
+        throw err;
+      } else {
+        callback(null,results)
+      }
+    })
   }
-
-
 }
 
-// 'SELECT games.*, gameGenres.genreId, gameLanguages.languageId \
-//     FROM games, genres, languages\
-//     INNER JOIN gameGenres\
-//       ON gameGenres.gameId = $1\
-//     Inner JOIN gameLanguages\
-//       ON gameLanguages.gameId = $1\
-//     WHERE games.id = $1'
