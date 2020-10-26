@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkBox from './darkBox.js';
-import '../css/achievements.css';
+import '../../public/css/achievements.css';
 
 let Achievements = (props)=>{
   let ach = props.gameData.steamAcheivments.slice(0, 3);

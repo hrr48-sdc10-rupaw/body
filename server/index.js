@@ -4,12 +4,12 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors')
 const path = require('path')
-const port = 3000;
+const port = 3001;
 
 app.use(cors())
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, '../client/build')))
+app.use(express.static(path.join(__dirname, '../client/public')))
 
 //comment and uncomment lines below to switch things on and off
 
@@ -25,13 +25,13 @@ const db = require('../db/postgres/controllersPostgres.js');
 
 // app.get('/moist-air/',  db.getAllGames);
 
-app.get('/moist-air/game', db.getOneGame);
+app.get('/moist-air/game/', db.getOneGame);
 
-app.post('/moist-air/game', db.postGame);
+app.post('/moist-air/game/', db.postGame);
 
 // app.put('/moist-air/game/', db.updateGame);
 
-// app.delete('/moist-air/game', db.deleteOneGame);
+// app.delete('/moist-air/game', db.deleteOneGame);v
 
 let server = app.listen(port, () => {
   console.log(`listening at ${port}...`);

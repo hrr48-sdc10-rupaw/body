@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/addtocart.css';
+import '../../public/css/addtocart.css';
 
 
 let AddToCart = (props) =>{

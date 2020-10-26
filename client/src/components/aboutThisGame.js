@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleLine from './titleLine.js';
-import '../css/aboutthisgame.css';
+import '../../public/css/aboutthisgame.css';
 let AboutThisGame = (props)=>{
 
   return(

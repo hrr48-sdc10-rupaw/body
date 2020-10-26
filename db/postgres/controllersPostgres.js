@@ -43,6 +43,7 @@ module.exports = {
         game.moreLikeThis = objArrayParser(game.moreLikeThis);
         game.requirements = objParser(game.requirements);
         game.attributes = objParser(game.attributes);
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.json(game);
         res.end(console.log('Game Recieved'))
       }

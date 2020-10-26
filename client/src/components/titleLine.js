@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/titleLine.css';
+import '../../public/css/titleLine.css';
 
 let TitleLine = (props)=>{
 return (

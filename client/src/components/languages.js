@@ -1,7 +1,7 @@
 import React from 'react';
 import DarkBox from './darkBox.js';
 import LanguageItem from './languageItem.js';
-import '../css/languages.css';
+import '../../public/css/languages.css';
 
 class Languages extends React.Component{
   constructor(props){
