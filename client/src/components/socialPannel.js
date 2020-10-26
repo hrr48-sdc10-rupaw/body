@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkBox from './darkBox.js';
-import '../css/socialPannel.css';
+import '../../public/css/socialPannel.css';
 
 let SocialPannel = (props)=>{
   return(

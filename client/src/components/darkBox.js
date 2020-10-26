@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/darkBox.css';
+import '../../public/css/darkBox.css';
 
 
 let DarkBox = (props) =>{

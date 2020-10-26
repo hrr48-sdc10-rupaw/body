@@ -3,17 +3,17 @@ import { check, sleep } from "k6";
 
 export let options = {
   vus: 100,
-  duration: "4m"
+  duration: "30s"
 };
 export default function() {
-  let res = http.get("http://localhost:3000/moist-air/game/?id=9000000");
+  let res = http.get("http://localhost:3001/moist-air/game/?id=9000000");
   check(res, {
     "success": (r) => r.status == 200
   });
 
-  var url = 'http://localhost:3000/moits-air/game';
+  var url = 'http://localhost:3001/moist-air/game';
   var game = JSON.stringify({
-    "id": Math.floor(Math.random()* 2000000) + 185000002,
+    "id": Math.floor(Math.random()* 200000000) + 195000002,
     "titleCover": "https://s3.us-east-2.amazonaws.com/images.for.hrr/header.jpg",
     "title": "The grateful Dead",
     "price": "$100.00",

@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkBox from './darkBox.js';
-import '../css/infoPannel.css';
+import '../../public/css/infoPannel.css';
 import ButtonLink from './buttonlink.js';
 import PannelBar from './pannelBar.js';
 

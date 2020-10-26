@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkBox from './darkBox.js';
-import '../css/ITGRTY.css';
+import '../../public/css/ITGRTY.css';
 
 let ITGRTY = (props)=> {
   return(

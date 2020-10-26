@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/pannelBar.css';
+import '../../public/css/pannelBar.css';
 
 
 let PannelBar = (props)=>{

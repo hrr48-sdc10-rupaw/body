@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import AddToCart from './components/addToCart.js';
 import AboutThisGame from './components/aboutThisGame.js';
-import './css/App.css';
+import '../public/css/App.css';
 import SystemReqs from './components/systemReqs.js';
 import ITGRTY from './components/isThisGameRTY.js';
 import Attributes from './components/attributes.js';
@@ -30,7 +30,7 @@ class App extends React.Component {
     let urlParams = new URLSearchParams(queryString);
     let id = parseInt(urlParams.get('id')) || 1;
     console.log(id);
-    axios.get(`/moist-air/game?id=${id}`)
+    axios.get(`http://localhost:3001/moist-air/game?id=${id}`)
     .then((res)=>{
       console.log(res)
       this.setState({
