@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS sdc;
 CREATE DATABASE sdc;
 \c sdc;
 
-SET maintenance_work_mem to '16GB';
+SET maintenance_work_mem to '1GB';
 
 
 

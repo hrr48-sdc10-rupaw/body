@@ -9,9 +9,7 @@
     "seed": "node db/mongo/seedData.js",
     "start": "nodemon server/index.js",
     "create": "node db/modelsPostgres/Game.js",
-    "dataGenGame": "node --max-old-space-size=16384 db/dataGen/dataGameGeneration.js",
-    "dataGenLanguage": "node --max-old-space-size=16384 db/dataGen/dataLanguageGeneration.js",
-    "dataGenGenre": "node --max-old-space-size=16384 db/dataGen/dataGenreGeneration.js",
+    "dataGenGame": "node db/dataGen/dataGameGeneration.js",
     "seedPSQL": "psql < db/postgres/schema.sql",
     "k6": "k6 run k6.js"
   },
