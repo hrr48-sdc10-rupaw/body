@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS sdc;
 CREATE DATABASE sdc;
 \c sdc;
 
-SET maintenance_work_mem to '1GB';
+SET maintenance_work_mem to '512MB';
 
 
 
@@ -25,8 +25,5 @@ CREATE TABLE games (
 );
 
 -- games table
-COPY games (id, titleCover, title, price, aboutInfo, requirements, genre, developer, publisher, releaseDate, steamAcheivments, languages, attributes, moreLikeThis)
-FROM '/Users/michael/Documents/Galvanize/HRR48/SDC/SDC-Project/body/games.csv'
-DELIMITER '|'
-CSV HEADER;
+\COPY games (id, titleCover, title, price, aboutInfo, requirements, genre, developer, publisher, releaseDate, steamAcheivments, languages, attributes, moreLikeThis) FROM '/home/ec2-user/body/games.csv' DELIMITER '|' CSV HEADER;
 
