@@ -52,5 +52,7 @@ Access different products but adding query params like so:
     - 'id' is not the object _id, but an id given in the original data generation script
     
  # Module Frontend
+ ![img](https://i.imgur.com/Q7lglyH.png)
  
+ # Stress Test Results
  ![img](https://i.imgur.com/3ak0kJu.png)
