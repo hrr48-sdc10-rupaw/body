@@ -50,3 +50,7 @@ Access different products but adding query params like so:
   - Finds game to be deleted by referencing query perameters
   - Looks for the id of the game and then deletes that one document using deleteOne
     - 'id' is not the object _id, but an id given in the original data generation script
+    
+ # Module Frontend
+ 
+ ![img](https://i.imgur.com/3ak0kJu.png)
