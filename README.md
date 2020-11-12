@@ -1,8 +1,17 @@
 # Vapor
 Vapor is a e-commerce application focused mainly on the video game industry. It is a product page where each product can be rendered to the page based on product id. The main focus here was the information service, giving the customer information about the product they were interested in. Below are a few helpful setions to help jumping into the project a little easier.
 
-## Body
-This file is for the body section of the SDC. It does not include the hero-section or the reviews section.
+## Tech Used
+- Express
+- PostgreSQL
+- Cassandra
+- AWS EC2
+- AWS S3
+- New Relic
+- k6
+- loader.io
+
+## Startup Instructions
 
 If first time runing this program please follw the instructions below to start application properly.
 
