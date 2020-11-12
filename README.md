@@ -1,4 +1,7 @@
-# Body
+# Vapor
+Vapor is a 
+
+## Body
 This file is for the body section of the SDC. It does not include the hero-section or the reviews section.
 
 If first time runing this program please follw the instructions below to start application properly.
@@ -26,7 +29,7 @@ Access different products but adding query params like so:
 - http://localhost:3000/?id=85
 
 
-# CRUD Operations:
+## CRUD Operations:
 
 
 - Create | POST: '/moist-air/'
@@ -51,10 +54,10 @@ Access different products but adding query params like so:
   - Looks for the id of the game and then deletes that one document using deleteOne
     - 'id' is not the object _id, but an id given in the original data generation script
     
- # Module Frontend
+ ## Module Frontend
  ![img](https://i.imgur.com/Q7lglyH.png)
  
- # Stress Test Results
+ ## Stress Test Results
  
  Service stress results using New Relic: 
  ![img](https://i.imgur.com/3ak0kJu.png)
